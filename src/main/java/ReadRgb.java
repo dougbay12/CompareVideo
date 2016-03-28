@@ -16,21 +16,33 @@ public class ReadRgb {
         int  red = 0;
         int  green = 0;
         int  blue = 0;
-        int clr = 0;
+        int clr;
         String friendly;
-        for (int w = 0; w < image.getWidth(); w++)
+        int[][] colorsPerFrameArray = new int[totalheight][totalwidth];
+        colorsPerFrameArray[0][0]=1;
+
+//        for (int w = 0; w < image.getWidth(); w++)
+//        {
+//            for (int h = 0; h < image.getHeight(); h++) {
+//                friendly = "h"+Integer.toString(h)+"w"+Integer.toString(w);
+//                clr =  image.getRGB(w,h);
+//                red   = (clr & 0x00ff0000) >> 16;
+//                green = (clr & 0x0000ff00) >> 8;
+//                blue  =  clr & 0x000000ff;
+//            }
+//        }
+        for (int h = 0; h < image.getHeight(); h++)
         {
-            for (int h = 0; h < image.getHeight(); h++) {
-                friendly = "h"+Integer.toString(h)+"w"+Integer.toString(w);
+            for (int w = 0; w < image.getWidth(); w++) {
                 clr =  image.getRGB(w,h);
+                colorsPerFrameArray[h][w]=clr;
                 red   = (clr & 0x00ff0000) >> 16;
                 green = (clr & 0x0000ff00) >> 8;
                 blue  =  clr & 0x000000ff;
+                String tmp4 = "";
             }
         }
-        int lastRed = red;
-        int lastGreen = green;
-        int lastBlue = blue;
         String tmp = "tmp";
+
     }
 }

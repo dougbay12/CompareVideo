@@ -8,7 +8,7 @@ import java.io.IOException;
  */
 public class Main {
     public static void main(String[] args) throws Exception {
-          ReadRgb.fromImage("src/main/resources/png/720p-477.png");
+          ReadRgb.fromImage("src/main/resources/png/720p-174.png");
     }
 }
 
